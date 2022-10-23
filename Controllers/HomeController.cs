@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Intro.Models;
+using Intro.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Intro.Controllers
@@ -7,8 +8,9 @@ namespace Intro.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly iServiceCounter servicesCounter;
+        ServicesCounter services = new ServicesCounter();
+        public HomeController(ILogger<HomeController> logger, iServiceCounter servicesCounter)
         {
             _logger = logger;
         }
@@ -28,7 +30,7 @@ namespace Intro.Controllers
 
         public IActionResult IndexContent()
         {
-            return Content("sss");
+            return Content("Counter => " + servicesCounter.GetCounter());
         }
         public IActionResult IndexJson()
         {
