@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\text.gif" />
+    <Content Remove="wwwroot\text.gif" />
   </ItemGroup>
 
   <ItemGroup>
