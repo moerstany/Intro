@@ -17,10 +17,16 @@ namespace Intro.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Name = "Татьяна";
-            ViewBag.Secondname = "Викторовна";
-            ViewBag.Surname = "Лугинина";
-            return View();
+            //ViewBag.Name = "Татьяна";
+            //ViewBag.Secondname = "Викторовна";
+            //ViewBag.Surname = "Лугинина";
+            Person person = new Person();
+            person.Age = 42;
+            person.Name = "Татьяна";
+            person.Secondname = "Викторовна";
+            person.Surname = "Лугинина";
+
+            return View(person);
         }
         public IActionResult Test()
         {

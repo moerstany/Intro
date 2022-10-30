@@ -3,6 +3,8 @@
     int a=10;
     a++;
 }
+@model Person
+
 <br />
 <div class="card mb-3" style="max-width: 900px;">
   <div class="row g-0">
@@ -11,7 +13,7 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">@ViewBag.Surname @ViewBag.Name @ViewBag.Secondname</h5>
+        <h5 class="card-title">@Model.Surname @Model.Name @Model.Secondname</h5>
         <p class="card-text"> Программист, Бухгалтер, Экономист</p>
         <p class="card-text"> Образование высшее</p>
             <p class="card-text"> Август 2020 — по настоящее время 2 года 3 месяца 
